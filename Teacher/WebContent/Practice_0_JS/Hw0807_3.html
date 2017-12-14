@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		function test() {
+			var mail = document.getElementById("em");
+			var id1 = mail.value
+	
+			var idx = id1.indexOf("@");
+			
+			var id2 = id1.substr(2,idx);
+	
+			alert(id2);
+		}	
+	</script>
+</head>
+<body>
+	<input type="button" onClick="test()" value="눌러"><br>
+	ID : <input type="text" id="em">(아이디를 이메일로 입력하세요.)
+</body>
+</html>

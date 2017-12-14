@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#no4").click(function(){
+				$("#no4").text("");
+		});		
+		})
+	
+  		function test() {
+//			var num1 = document.getElementById("no1").value;
+			num1 = $("#no1").val();
+			
+//			var num2 = document.getElementById("no2").value;
+			num2 = $("#no2").val();			
+			
+			var result = Number(num1)+Number(num2);
+			
+			
+			document.getElementById("no3").value = result;
+			//$("#no3").val(result);
+			//document.getElementById("no4").innerHTML = result;
+			$("#no4").text(result);
+		} 
+  		
+  	</script>
+</head>
+<body>
+	<input type="button" onClick="test()" value="눌러"><br>
+	1번 : <input type="text" id="no1">숫자를 입력하세요<br>
+	2번 : <input type="text" id="no2">숫자를 입력하세요<br>
+	합 : <input type="text" id="no3"> <div id="no4"> </div>
+</body>
+</html>
+
