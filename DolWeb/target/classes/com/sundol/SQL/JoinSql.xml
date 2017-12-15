@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+	"-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="join">
+	<insert id="insertMember" parameterType="hMap">
+		INSERT
+		INTO
+			Member(m_id, m_pw, m_nick)
+		VALUES(#{id}, #{pwd}, #{nick})
+	</insert>
+	<select id="idcheck" parameterType="String" resultType="int">
+		SELECT
+			count(m_id)
+		FROM
+			MEMBER 
+		WHERE
+			m_id = #{id}
+	</select>
+
+</mapper>
